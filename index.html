@@ -7,16 +7,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-dark">
+<div class="d-flex flex-column wrapper"> <!-- Criação dessa div para delimitar o conteudo da pag -->
 
   <header class="container-fluid text-center bg-primary text-white p-3">
     <div class="row">
-      <div class="col-6">
-        <h1>Dev Antônio Lemos</h1>
+      <div class="col-8 col-md-6">
+        <h1 class="display-6">Dev Antônio Lemos</h1>
       </div>
-      <div class="col-3 pt-2">
+      <div class="col col-md pt-2">
         <a href="https://www.linkedin.com/in/antonio-marques-3572b7235/" target="_blank" class="text-white">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin"
             viewBox="0 0 16 16">
@@ -25,7 +27,7 @@
           </svg>
         </a>
       </div>
-      <div class="col-3 pt-2">
+      <div class="col col-md pt-2">
         <a href="https://github.com/AntonioLemos316" target="_blank" class="text-white">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github"
             viewBox="0 0 16 16">
@@ -37,44 +39,76 @@
     </div>
   </header>
 
-  <main class="container-fluid bg-dark text-center text-primary p-5">
+  <main class="flex-fill container bg-dark text-center text-primary p-5">
     <div class="row">
-      <div class="col-6">
-        <img src="./img/94558439.jpg" alt="Desenvolvedor Antônio Lemos"
-          class="w-75 rounded-circle border border-2 border-primary">
-        <h2 class="pt-4">Sobre mim</h2>
-        <p class="text-white">Aluno de DSI no Grau Técnico, atualmente na cadeira de front-end.
-          Focado em aprimorar o html5, css3 e js (front-end), para no futuro conectar junto com o node.js (back-end) e o
-          mysql (banco de dados), assim formando o crud.</p>
+      <div class="col-12">
+        <img src="./img/94558439.jpg" alt="Imagem do Dev Antônio Lemos"
+          class="w-25 rounded-circle border border-2 border-primary">
+          <h2 class="display-6 pt-5">Sobre mim</h2>
+        <p class="text-white">Estudante de Desenvolvimento de Sistemas, com foco em ser um profissional Full Stack.</p>
+        <hr></hr>
       </div>
-      <div class="col-6">
-        <h2>Tecnologias</h2>
-        <p class="text-white">No 1º semestre estudei, lógica de programação, introdução a bd e agora no 2º semestre
-          estou estudando o front-end.</p>
-        <h4>Lógica de Programação</h4>
-        <img src="./img/techs/visualg-logo.png" alt="VISUALG3" class="w-25 bg-white border border-2 border-success">
-        <img src="./img/techs/logo-java-256.png" alt="JAVA" class="w-25 bg-white border border-2 border-success">
-        <h4 class="pt-2">Introdução a Banco de Dados</h4>
-        <img src="./img/techs/mysql-256.png" alt="MYSQL" class="w-25 bg-white border border-2 border-success">
-        <h4 class="pt-2">Front-End</h4>
-        <img src="./img/techs/logo-html-5-256.png" alt="HTML5" class="w-25 bg-white border border-2 border-success">
-        <img src="./img/techs/logo-css-3-256.png" alt="CSS3" class="w-25 bg-white border border-2 border-success">
-        <img src="./img/techs/bootstrap-256.png" alt="BOOTSTRAP" class="w-25 bg-white border border-2 border-success">
-        <img src="./img/techs/logo-javascript-icon-256.png" alt="JAVASCRIPT"
-          class="w-25 bg-white border border-2 border-success m-1">
-      </div>
+      <div class="col-12 pt-4">
+        <h2 class="display-6">Habilidades Básicas</h2>
+        <div class="col-12">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/techs/mysql-256.png" class="d-block w-auto m-auto" alt="imagem do MySQL">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/techs/logo-javascript-icon-256.png" class="d-block w-auto m-auto" alt="imagem do JavaScript">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/techs/logo-java-256.png" class="d-block w-auto m-auto" alt="imagem do Java">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/techs/logo-html-5-256.png" class="d-block w-auto m-auto" alt="imagem do HTML5">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/techs/logo-css-3-256.png" class="d-block w-auto m-auto" alt="imagem do CSS3">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/techs/bootstrap-256.png" class="d-block w-auto m-auto" alt="imagem do BootStrap5">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
     </div>
+
+    <hr></hr>
+    <h2 class="display-6">Portfolio, futuramente exemplos de cases de estudo</h2>
+
+    <hr></hr>
+    <h2 class="display-6">Formulário</h2>
   </main>
 
   <footer class="bg-primary text-center p-4">
     <div class="row">
-      <div class="col-12">
+      <div class="col">
         <a href="https://www.antoniolemosportfolio.net" target="_blank" class="text-white">&copy Antônio Marques,
           direitos reservados!</a>
       </div>
     </div>
   </footer>
-
+  
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
